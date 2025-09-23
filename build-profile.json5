@@ -1,0 +1,49 @@
+{
+  app: {
+    signingConfigs: [
+      {
+        name: 'default',
+        material: {
+          certpath: './signatures/OpenHarmonyProfileRelease.pem',
+          storePassword: '000000166a1740e07e73b3de11079d1fc70464d1d2852ac3232e640ce6f7cd64f70742735c98',
+          keyAlias: 'openharmony application profile release',
+          keyPassword: '00000016a7fe7631558502449a8e26b70955f7bf5ae0b5f5b331ba655cbedf3073d8afbaeb60',
+          profile: './signatures/app1-profile.p7b',
+          signAlg: 'SHA256withECDSA',
+          storeFile: './signatures/OpenHarmony.p12',
+        },
+      },
+    ],
+    products: [
+      {
+        name: 'default',
+        signingConfig: 'default',
+        compileSdkVersion: 18,
+        compatibleSdkVersion: 18,
+        runtimeOS: 'OpenHarmony',
+      },
+    ],
+    buildModeSet: [
+      {
+        name: 'debug',
+      },
+      {
+        name: 'release',
+      },
+    ],
+  },
+  modules: [
+    {
+      name: 'entry',
+      srcPath: './entry',
+      targets: [
+        {
+          name: 'default',
+          applyToProducts: [
+            'default',
+          ],
+        },
+      ],
+    },
+  ],
+}
