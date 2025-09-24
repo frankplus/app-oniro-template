@@ -2,15 +2,19 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "A simple note taking application for OpenHarmony"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "Notes App - Create and manage your notes"
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "Notes"
+    },
+    {
+      "name": "app_name",
+      "value": "Notes App"
     }
   ]
 }
